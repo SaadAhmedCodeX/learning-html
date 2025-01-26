@@ -20,5 +20,3 @@ The topics covered include but are not limited to:
 - Images and Multimedia
 - Tables
 - SEO (Search Engine Optimization)
-
-
