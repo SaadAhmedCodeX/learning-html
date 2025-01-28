@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score of players</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Table styling */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Table header styling */
+        th {
+            background-color: #4e54c8;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        /* Table row and cell styling */
+        td {
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        /* Zebra striping for table rows */
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Caption styling */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Score of players</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Match</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Virat Kohli</td>
+                <td>34</td>
+                <td>IPL 2024</td>
+            </tr>
+            <tr>
+                <td>Rohit Sharma</td>
+                <td>74</td>
+                <td>IPL 2024</td>
+            </tr>
+            <tr>
+                <td>Ishan Kishan</td>
+                <td>54</td>
+                <td>IPL 2024</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

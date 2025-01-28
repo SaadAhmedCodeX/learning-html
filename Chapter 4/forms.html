@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Gender dropdown */
+select {
+    appearance: none;
+    background-color: #fff;
+}
+
+/* Radio and Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    width: 100%;
+    background-color: #1bbb7e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Terms and conditions label fix */
+input[type="checkbox"] + lable {
+    display: inline;
+}
+
+/* Error fix: Align labels properly */
+input[type="checkbox"] + label {
+    display: inline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form {
+        padding: 15px 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <form action="/submit.php">
+        <!-- Name input -->
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Name" required>
+        </div>
+        <!-- Phone input -->
+        <div>
+            <label for="ph">Phone</label>
+            <input id="ph" type="tel" placeholder="Enter Phone" required>
+        </div>
+        <!-- Email input -->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter Email" required>
+        </div>
+        <!-- Passowrd input -->
+        <div>
+            <label for="passowrd">Password</label>
+            <input id="password" type="password" placeholder="Enter Password" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" required>
+        </div>
+        <!-- Dropdown (select input) for Gender -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender
+                </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+                <p>Subscription Plan</p>
+                <div>
+                    <input id="basic" type="radio" name="subscription" value="basic">
+                    <label for="basic">Basic</label>
+    
+                
+                    <input id="premium" type="radio" name="subscription" value="premium">
+                    <label for="premium">Premium</label>
+                
+                    <input id="vip" type="radio" name="subscription" value="vip">
+                    <label for="vip">VIP</label>
+                </div>
+                <div>
+                    <input id="terms" type="checkbox" required>
+                    <lable for="terms">I agree to the terms and conditions</lable>
+                </div>
+                <div>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" placeholder="Enter your comments"rows="4"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+</body>
+
+</html>
